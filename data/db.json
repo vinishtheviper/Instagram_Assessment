@@ -1,0 +1,124 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "no_of_likes": 0,
+      "post_image_url": "https://c.ndtvimg.com/2021-10/gjo8hnng_ms-dhoni-ipl_625x300_07_October_21.jpg",
+      "comments": [],
+      "captions": "",
+      "profile_image_url": "https://c.ndtvimg.com/2021-10/gjo8hnng_ms-dhoni-ipl_625x300_07_October_21.jpg",
+      "profile_name": "Vinish",
+      "location": "",
+      "is_liked": false,
+      "is_saved": false,
+      "my_post": false
+    },
+    {
+      "id": 2,
+      "no_of_likes": 1,
+      "post_image_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2022/08/02/53f7d4a3-bf74-48b7-8b5d-c19894f83b46/GettyImages-1242179171-1-.jpg",
+      "comments": [],
+      "captions": "ctycuctuctu",
+      "profile_image_url": "https://resources.pulse.icc-cricket.com/ICC/photo/2022/08/02/53f7d4a3-bf74-48b7-8b5d-c19894f83b46/GettyImages-1242179171-1-.jpg",
+      "profile_name": "Vinish",
+      "location": "test",
+      "is_liked": true,
+      "is_saved": false,
+      "my_post": false
+    },
+    {
+      "id": 3,
+      "no_of_likes": 0,
+      "post_image_url": "https://images.hindustantimes.com/img/2022/09/08/1600x900/ANI-20220908352-0_1662660969319_1662660969319_1662660980163_1662660980163.jpg",
+      "comments": [],
+      "captions": "sdfa",
+      "profile_image_url": "https://images.hindustantimes.com/img/2022/09/08/1600x900/ANI-20220908352-0_1662660969319_1662660969319_1662660980163_1662660980163.jpg",
+      "profile_name": "Vinish",
+      "location": "sd",
+      "is_liked": false,
+      "is_saved": false,
+      "my_post": false
+    },
+    {
+      "id": 4,
+      "no_of_likes": 1,
+      "post_image_url": "https://rukminim1.flixcart.com/image/416/416/j59wyvk0/poster/4/z/g/large-150302-posters-wwe-roman-reigns-poster-matt-finish-original-imaevzkdakq7q4ms.jpeg?q=70",
+      "comments": [],
+      "captions": "Test",
+      "profile_image_url": "https://rukminim1.flixcart.com/image/416/416/j59wyvk0/poster/4/z/g/large-150302-posters-wwe-roman-reigns-poster-matt-finish-original-imaevzkdakq7q4ms.jpeg?q=70",
+      "profile_name": "Vinish",
+      "location": "VALLIOOR",
+      "is_liked": true,
+      "is_saved": false,
+      "my_post": false
+    },
+    {
+      "id": 5,
+      "no_of_likes": 1,
+      "post_image_url": "https://i.pinimg.com/736x/1b/d1/1a/1bd11af94777fe979f8ef3b4a538d0e9.jpg",
+      "comments": [],
+      "captions": "",
+      "profile_image_url": "https://i.pinimg.com/736x/1b/d1/1a/1bd11af94777fe979f8ef3b4a538d0e9.jpg",
+      "profile_name": "Vinish",
+      "location": "",
+      "is_liked": true,
+      "is_saved": false,
+      "my_post": false
+    },
+    {
+      "id": 6,
+      "no_of_likes": 1,
+      "post_image_url": "blob:http://localhost:3000/6ba80187-a31d-42df-a38f-e04721c6ec47",
+      "comments": [],
+      "captions": "hfsdsfbdsjfsjfdsf",
+      "profile_image_url": "profile.jpg",
+      "profile_name": "Vinish",
+      "location": "VALLIOOR",
+      "is_liked": true,
+      "is_saved": true,
+      "my_post": true
+    }
+  ],
+  "stories": [
+    {
+      "id": 1,
+      "description": "Vinish",
+      "url": "profile.jpg"
+    },
+    {
+      "id": 2,
+      "description": "Rohit",
+      "url": "images/rohit.jpg"
+    },
+    {
+      "id": 3,
+      "description": "Dhoni",
+      "url": "images/dhoni.jpg"
+    },
+    {
+      "id": 4,
+      "description": "Kohli",
+      "url": "images/kohli.jpg"
+    },
+    {
+      "id": 5,
+      "description": "Roman",
+      "url": "images/roman.jpg"
+    },
+    {
+      "id": 6,
+      "description": "ABD",
+      "url": "images/abd.jpg"
+    },
+    {
+      "id": 7,
+      "description": "Dhoni",
+      "url": "images/dhoni.jpg"
+    },
+    {
+      "id": 8,
+      "description": "Vinish",
+      "url": "profile.jpg"
+    }
+  ]
+}
