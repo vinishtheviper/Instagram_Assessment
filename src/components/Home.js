@@ -10,7 +10,7 @@ import {FaRegPaperPlane} from 'react-icons/fa'
 
 
 const Home = () => {
-    const { baseURL ,  posts, setPosts, errMsg} = useContext(DataContext);
+    const { baseURL ,  posts, setPosts, errMsg , allPosts , setAllPosts, storyImage} = useContext(DataContext);
 
     const defaultSrc = useMemo(() => require("../asset/images/no_image.png") ,[])
 
@@ -22,6 +22,7 @@ const Home = () => {
         document.getElementById("modal_overlay").style.display = "none";
         document.getElementById("post_modal").style.display = "none";
         document.getElementById("comment_modal").style.display = "none";
+        document.getElementById("story_modal").style.display = "none";
         document.getElementById("uploadPostForm").reset();
         setImgSrc(defaultSrc)
         setLoction("");
@@ -41,7 +42,9 @@ const Home = () => {
     const uploadPost = async (e) => {
         e.preventDefault();
 
-        const newId = posts.length ? posts[posts.length -1].id + 1 : 1;
+        
+
+        const newId = allPosts.length ? allPosts[allPosts.length -1].id + 1 : 1;
         const newPostObj = {
             id : newId,
             no_of_likes: 0,
@@ -49,18 +52,21 @@ const Home = () => {
             comments: [],
             captions: caption,
             profile_image_url: "profile.jpg",
-            profile_name: "Vinish",
+            profile_name: "vinish_kevin",
             location: location,
             is_liked: false,
             is_saved: false,
             my_post : true
         }
 
+        console.log(newPostObj)
+
 
         try{
             const response = await axios.post(`${baseURL}/posts`, newPostObj);
             if(response){
                 setPosts([...posts , newPostObj])
+                setAllPosts([...allPosts , newPostObj])
                 cancelPost()
             }
         }
@@ -216,6 +222,21 @@ const Home = () => {
                             
                             
                         </form>
+                    </div>
+
+                </div>
+
+                <div className="modal" id="story_modal">
+                    <div className="content">
+
+                        <h4 className="createPost">Story</h4>
+                        
+                            <div className='row'>
+                                <div className='col-12 col-md-12'>
+                                    <img className="storyImage" src={require("../asset/" + storyImage)} style={{ width: '100%', height: '200px' }} alt="" />                                    
+                                </div>
+                               
+                            </div>
                     </div>
 
                 </div>

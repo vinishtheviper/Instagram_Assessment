@@ -9,9 +9,11 @@ export const DataProvider = ({ children }) =>{
 
     const baseURL = useMemo(() => "http://localhost:8000" ,[])
 
+    const [allPosts , setAllPosts] = useState([]);
     const [posts , setPosts] = useState([]);
     const [stories , setStories] = useState([]);
     const [errMsg , setErrMsg] = useState(null);
+    const [storyImage , setStoryImage] = useState(null);
 
     const [searchInput , setSearchInput] = useState('');
 
@@ -19,7 +21,13 @@ export const DataProvider = ({ children }) =>{
         const fetchPosts = async () =>{
             try{
                 const response = await axios.get(`${baseURL}/posts`)
-                if(response){ 
+                if(response){
+
+                    setAllPosts(response.data)
+
+                    const filteredData =  (response.data).filter((obj) => obj.my_post === false)
+
+                    
                     setPosts((response.data).filter((obj) => obj.my_post === false));
                 }
             }
@@ -48,7 +56,7 @@ export const DataProvider = ({ children }) =>{
     return (
         <DataContext.Provider value={{
             baseURL ,posts , setPosts , errMsg , setErrMsg , 
-            searchInput , setSearchInput , stories , setStories
+            searchInput , setSearchInput , stories , setStories , allPosts , setAllPosts, storyImage , setStoryImage
         }}>
             { children }
         </DataContext.Provider>

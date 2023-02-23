@@ -7,7 +7,7 @@ const Posts = () => {
 
     const bgImage = require("../asset/profile.jpg")
 
-    const { baseURL, posts, setPosts, errMsg, searchInput, stories} = useContext(DataContext);
+    const { baseURL, posts, setPosts, errMsg, searchInput, stories, setStoryImage} = useContext(DataContext);
 
     const orderedPost = useMemo(() => [...posts].sort((a, b) => b.id - a.id), [posts]);
 
@@ -61,6 +61,14 @@ const Posts = () => {
         }
     }
 
+
+    const viewStory = (img) => {
+        setStoryImage(img)
+        document.getElementById("modal_overlay").style.display = "block";
+        document.getElementById("story_modal").style.display = "block";    
+    }
+
+
     return (
         <main>
 
@@ -72,7 +80,7 @@ const Posts = () => {
                             {stories.length ? (
                                 stories.map((data) => (
                                     <div key={data.id} className="stories__single">
-                                        <div className="stories__single__img-holder">
+                                        <div className="stories__single__img-holder"  onClick={() => viewStory(data.url)}>
                                             <div className="stories__single__img-holder__inner" style={{ backgroundImage: "url(" + require("../asset/" + data.url) + ")" }}>
                                             </div>
                                         </div>
@@ -124,6 +132,7 @@ const Posts = () => {
                                             <span className="card-icon card-icon-right" onClick={() => handleSaves(data.id)}>{data.is_saved ? <FaBookmark /> : <FaRegBookmark />}</span>
                                         </div>
                                         <span className="bold card-text">{data.no_of_likes} Likes</span>
+                                        
                                         <span className="card-text">
                                             <span className="bold title-margin">{data.profile_name}</span>
                                             {data.captions}
